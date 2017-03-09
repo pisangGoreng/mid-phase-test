@@ -1,19 +1,24 @@
-// // req express component
-// var express = require('express');
-// var router = express.Router();
-//
-// // req mongoose component
-// var mongoose = require('mongoose');
-// mongoose.connect('mongodb://localhost/simple-api-crud');
-//
-// // inisiasi models class setiap table
-// let Food = require("../models/foodsSchema");
-//
-// // router.get('/all', function (req, res, next) {
-// //     Food.find()
-// //         .then(function (result) {
-// //             res.send(result)
-// //         });
-// // });
-//
-// module.exports = router;
+var express = require('express');
+var router = express.Router();
+
+// req mongoose component
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/simple-api-crud');
+const food = require('../helper/food')
+
+// http://localhost:3000/food/all || GET
+router.get('/all', food.showAllData);
+
+// http://localhost:3000/food/all/1 || GET
+router.get('/all/:dataId', food.showOneData);
+
+// http://localhost:3000/food/create  || POST
+router.post('/create', food.createFood);
+
+// http://localhost:3000/food/update/:id
+router.put('/update/:dataId', food.updateFood);
+
+// http://localhost:3000/food/remove/:id
+router.delete('/remove/:dataId', food.deleteFood);
+
+module.exports = router;

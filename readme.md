@@ -11,6 +11,7 @@ Deskripsi dari program
 
 Langkah-langkah yang perlu dijalankan untuk menjalankan program tersebut
   - npm install
+  - npm run dev
   - Aplikasi bisa di akses via http://localhost:3000
   - silahkan, lihat pada bagian API Endpoint untuk mengetahui cara mengakses fitur Crud nya
 
@@ -26,4 +27,4 @@ Serta daftar API Endpoint yang bisa diakses untuk mengambil data
   http://localhost:3000/restaurant/:id        ||  GET   || melihat salah satu data restaurant berdasarkan id
   http://localhost:3000/restaurant/create     ||  POST  || membuat data restaurant baru & memasukkan ke dalam database
   http://localhost:3000/restaurant/update/:id ||  PUT   || mengupdate salah satu data restaurant yang ada  
-  http://localhost:3000/restaurant/remove/:id || DELETE || menghapus salah satu data restaurant dari database 
+  http://localhost:3000/restaurant/remove/:id || DELETE || menghapus salah satu data restaurant dari database
